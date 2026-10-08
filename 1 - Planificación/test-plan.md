@@ -92,7 +92,7 @@ Los errores se reportan en Jira como tipo Bug, desde el caso que falló en AIO T
 
 | Sprint | Módulo | Casos | Ejecución | Errores |
 |---|---|---|---|---|
-| 1 | Login y sesión | 16 diseñados | Pendiente | – |
+| 1 | Login y sesión | 16 diseñados | 16 | 2 |
 | 2 | Productos | Pendiente | Pendiente | – |
 | 3 | Categorías y movimientos | Pendiente | Pendiente | – |
 | 4 | Usuarios, reportes y no funcionales | Pendiente | Pendiente | – |
