@@ -31,13 +31,13 @@ pruebas de regresión en cada nueva versión.
 ## Documentación
 
 **Planificación**
-- [Requisitos](01-planificacion/requisitos.md)
-- [Historias de usuario](01-planificacion/historias-usuarios.md)
-- [Plan de pruebas](01-planificacion/test-plan.md)
-- [Matriz de trazabilidad](01-planificacion/matriz-trazabilidad.md)
+- [Requisitos](1%20-%20Planificaci%C3%B3n/requisitos.md)
+- [Historias de usuario](1%20-%20Planificaci%C3%B3n/historias-usuarios.md)
+- [Plan de pruebas](1%20-%20Planificaci%C3%B3n/test-plan.md)
+- [Matriz de trazabilidad](1%20-%20Planificaci%C3%B3n/matriz-trazabilidad.md)
 
 **Casos de prueba**
-- [Login y sesión (16 casos)](02-test-cases/01-login.md)
+- [Login y sesión (16 casos)](2%20-%20test-cases/01-login.md)
 
 
 
