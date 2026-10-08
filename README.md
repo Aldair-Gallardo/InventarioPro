@@ -87,9 +87,7 @@ Esta tabla la actualizo al terminar cada sprint.
 - [Historias de usuario](1%20-%20Planificaci%C3%B3n/historias-usuarios.md)
 - [Plan de pruebas](1%20-%20Planificaci%C3%B3n/test-plan.md)
 - [Matriz de trazabilidad](1%20-%20Planificaci%C3%B3n/matriz-trazabilidad.md)
-**Casos de prueba**
-- [Login y sesión (16 casos)](2%20-%20casos%20de%20prueba/01-login.md)
-Cada documento tiene también su versión en PDF o Excel para descargar.
+
  
 ## Capturas
  
