@@ -42,7 +42,7 @@ No se prueban: ventas, facturación, proveedores ni impresión (no son parte del
 
 ## 5. Ambiente
 
-- Windows 10 u 11.
+- Windows  11.
 - InventarioPro (C# con .NET 8).
 - Base de datos PostgreSQL `inventario_pro` y pgAdmin 4.
 - Jira y AIO Tests para gestionar historias, casos y errores.
