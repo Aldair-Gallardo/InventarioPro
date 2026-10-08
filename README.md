@@ -22,8 +22,22 @@ pruebas de regresión en cada nueva versión.
 | Requisitos no funcionales | 8 (RNF-01 a RNF-08) |
 | Historias de usuario | 17, organizadas en epics por módulo |
 | Casos de prueba diseñados | 16 (módulo Login) |
-| Casos ejecutados | En curso |
-| Bugs reportados | En curso |
+| Casos ejecutados | 16 en la versión 1.0 (14 Passed, 2 Failed) |
+| Bugs reportados | 2 |
+
+## Bugs encontrados
+
+Bugs reportados en Jira durante la ejecución. Cada uno tiene su reporte completo con pasos para reproducir, resultado esperado y obtenido, y evidencia.
+
+| Bug | Qué falla | Caso | Severidad | Versión | Estado |
+|---|---|---|---|---|---|
+| [IN-10](4%20-%20Bugs/IN-10.md) | El usuario distingue mayúsculas: con "ADMIN" no se puede iniciar sesión, aunque el requisito dice que "ADMIN" = "admin" | TC-LOGIN-07 | Media | 1.0 | Abierto |
+| [IN-11](4%20-%20Bugs/IN-11.md) | Un login correcto no reinicia el contador de intentos fallidos, y la cuenta se bloquea antes de tiempo | TC-LOGIN-11 | Alta | 1.0 | Abierto |
+
+**Cómo los encontré:**
+
+- **IN-10:** el caso probaba mayúsculas y espacios a la vez. Antes de reportar probé cada condición por separado para saber exactamente cuál fallaba: los espacios se ignoran bien, el problema son solo las mayúsculas.
+- **IN-11:** además de ver el bloqueo en la aplicación, revisé la tabla `usuarios` en PostgreSQL con una consulta SQL y confirmé que el contador no vuelve a 0 después del login correcto: al final queda en 3 y la cuenta bloqueada, cuando debería quedar en 1.
 
 ## Cómo trabajo
 
@@ -67,7 +81,7 @@ pruebas de regresión en cada nueva versión.
 
 | Sprint | Módulo | Casos | Ejecución | Bugs |
 |---|---|---|---|---|
-| 1 | Login y sesión | 16 | En curso (v1.0) | – |
+| 1 | Login y sesión | 16 | Terminado (v1.0): 14 Passed, 2 Failed | 2 |
 | 2 | Productos | Pendiente | – | – |
 | 3 | Categorías y movimientos | Pendiente | – | – |
 | 4 | Usuarios y reportes | Pendiente | – | – |
@@ -75,12 +89,6 @@ pruebas de regresión en cada nueva versión.
 | 6 | Regresión final (v1.2) | – | – | – |
 
 Esta tabla la actualizo al terminar cada sprint.
-
-## Bugs encontrados
-
-| Bug | Título | Caso que lo encontró | Severidad | Versión | Estado |
-|---|---|---|---|---|---|
-| – | Pendiente de ejecución | – | – | – | – |
 
 ## Documentación
 
@@ -93,7 +101,16 @@ Esta tabla la actualizo al terminar cada sprint.
 
 **Casos de prueba**
 
-- [Login y sesión (16 casos)](2%20-%20casos%20de%20prueba/01-login.md)
+- [Login y sesión (16 casos)](2%20-%20test-cases/01-login.md)
+
+**Ejecución**
+
+- [Login – versión 1.0 (resumen y resultados)](3%20-%20Ejecuci%C3%B3n/login-v1.0.md)
+
+**Bugs**
+
+- [IN-10 – El usuario distingue mayúsculas](4%20-%20Bugs/IN-10.md)
+- [IN-11 – El contador de intentos no se reinicia](4%20-%20Bugs/IN-11.md)
 
 ## Capturas
 
@@ -146,7 +163,5 @@ Como Jira y AIO Tests son privados, dejo capturas de cómo está organizado el t
 
 ## Lo que viene
 
-- Terminar la ejecución del Sprint 1 y reportar los bugs encontrados.
-- Escribir el resumen de ejecución del ciclo Login - v1.0.
 - Diseñar y ejecutar los casos de Productos (Sprint 2).
 - Re-test y regresión cuando pase a la versión 1.1.
